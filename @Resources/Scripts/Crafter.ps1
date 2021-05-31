@@ -5,8 +5,15 @@ function main {
 
 }
 
-function Vectorize {
+function Vector {
     Craft -type vector
+}
+
+function Bar {
+
+    $barType=$RmAPI.VariableStr('BarType')
+
+    Craft -type bar -barType $barType
 }
 
 function Craft {
@@ -25,6 +32,8 @@ function Craft {
 
     $bands = $RmAPI.Variable("Bands")
 
+
+#measure switch
     switch ($type) {
         'vector' {
             $layerCount=$RmAPI.Variable("LayerCount")
@@ -66,9 +75,13 @@ HandlerName=MainFinalOutput
 
 "@          
             }
+            $measureContent | Out-File -FilePath $($resources + 'Measures\AudioMeasures.inc') -Encoding utf8
+            
         }
     }
 
+
+#visualizer switch
     switch ($type) {
         'bar' {
             
@@ -112,31 +125,38 @@ Meter=Shape
 DynamicVariables=1
 W=$($angleCos*$width1 + $angleSin*$height1)
 H=$($angleSin*$width1 + $angleCos*$height1)
-TransformationMatrix=$(Math -f cos -v $(Math -f rad -v $(-$angle%360)));$(Math -f sin -v $(Math -f rad -v $(-$angle%360)));$(Math -f sin -v $(Math -f rad -v $(-$angle%360)));$(Math -f cos -v $(Math -f rad -v $(-$angle%360)));$($(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$width1}else{0})+$(if ($angle%360 -gt 0 -and $angel%360 -lt 180){$angleSin*$height1}else{0}));$($(if ($angle%360 -gt 180 -and $angel%360 -lt 360){$angleSin*$width1}else{0})+$(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$height1}else{0}))
+TransformationMatrix=$([math]::Cos(-$angle%360*([math]::PI/180)));$(-[math]::Sin(-$angle%360*([math]::PI/180)));$([math]::Sin(-$angle%360*([math]::PI/180)));$([math]::Cos(-$angle%360*([math]::PI/180)));$($(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$width1}else{0})+$(if ($angle%360 -gt 0 -and $angel%360 -lt 180){$angleSin*$height1}else{0}));$($(if ($angle%360 -gt 180 -and $angel%360 -lt 360){$angleSin*$width1}else{0})+$(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$height1}else{0}))
 
 "@
                     for ($i=1; $i -lt $bands+1; $i++) {
                         $shapeContent+=@"
 
-Shape$(if ($i -ne 1){$i}else{''})=Rectangle $(if($i -eq 1){$barStrokeWidth/2}else{($i-1)*$a}), $((1-$flipY)*$barHeight), $barWidth, ($(-1+2*$flipY)*Clamp($barHeight*[Measure$(if ($flipX -eq 0){$i}else{$bands-$i+1})], $minimumHeight, $barHeight)), $cornerRadius | Fill Color [#Color1]
+Shape$(if ($i -ne 1){$i}else{''})=Rectangle $(if($i -eq 1){$barStrokeWidth/2}else{$barStrokeWidth/2+($i-1)*$a}), $((1-$flipY)*$barHeight), $barWidth, ($(-1+2*$flipY)*Clamp($barHeight*[Measure$(if ($flipX -eq 0){$i}else{$bands-$i+1})], $minimumHeight, $barHeight)), $cornerRadius | Fill Color [#Color$i]
 
 "@
                     }
+                    break
                 }
 
 
                 'mirrorX' {
                     $gr1XOff = $RmAPI.Variable("Group1XOffset")
                     $gr1YOff = $RmAPI.Variable("Group1YOffset")
+                    $gr1flipX= $RmAPI.Variable("Group1XFlip")
+                    $gr1flipY= $RmAPI.Variable("Group1YFlip")
                     $gr2XOff = $RmAPI.Variable("Group2XOffset")
                     $gr2YOff = $RmAPI.Variable("Group2YOffset")
+                    $gr2flipX= $RmAPI.Variable("Group2XFlip")
+                    $gr2flipY= $RmAPI.Variable("Group2YFlip")
+                    $gr2Complement=$RmAPI.Variable("Group2Complement")
 
                     $groupWidth = $(if (($gr1XOff+($barWidth+$barGap)*$bands-$barGap) -le ($gr2XOff+2*($barWidth+$barGap)*$bands-$barGap)){($gr2XOff+2*($barWidth+$barGap)*$bands-$barGap)}else{($gr1XOff+($barWidth+$barGap)*$bands-$barGap)})
                     $groupHeight = $(if ($gr1YOff -ge $gr2YOff){$gr1YOff}else{$gr2YOff})
 
                     $a = $barWidth + $barGap
+                    $RmAPI.Log("$($a*$bands-$barGap)")
                     $width1 = $groupWidth+$barStrokeWidth
-                    $height1 = $group+$levitate+$barStrokeWidth+$groupHeight
+                    $height1 = $barHeight+$levitate+$barStrokeWidth+$groupHeight
 
                     $shapeContent+=@"
 
@@ -145,22 +165,70 @@ Meter=Shape
 DynamicVariables=1
 W=$($angleCos*$width1 + $angleSin*$height1)
 H=$($angleSin*$width1 + $angleCos*$height1)
-TransformationMatrix=$(Math -f cos -v $(Math -f rad -v $(-$angle%360)));$(Math -f sin -v $(Math -f rad -v $(-$angle%360)));$(Math -f sin -v $(Math -f rad -v $(-$angle%360)));$(Math -f cos -v $(Math -f rad -v $(-$angle%360)));$($(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$width1}else{0})+$(if ($angle%360 -gt 0 -and $angel%360 -lt 180){$angleSin*$height1}else{0}));$($(if ($angle%360 -gt 180 -and $angel%360 -lt 360){$angleSin*$width1}else{0})+$(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$height1}else{0}))
+TransformationMatrix=$([math]::Cos(-$angle%360*([math]::PI/180)));$(-[math]::Sin(-$angle%360*([math]::PI/180)));$([math]::Sin(-$angle%360*([math]::PI/180)));$([math]::Cos(-$angle%360*([math]::PI/180)));$($(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$width1}else{0})+$(if ($angle%360 -gt 0 -and $angel%360 -lt 180){$angleSin*$height1}else{0}));$($(if ($angle%360 -gt 180 -and $angel%360 -lt 360){$angleSin*$width1}else{0})+$(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$height1}else{0}))
 
 "@
-                    for ($i=1; $i -lt $bands+1; $i++) {
-                        
+                    for ($i=1; $i -lt $bands+1; $i++) {                        
                         $shapeContent+=@"
 
-Shape$(if ($i -ne 1){$i}else{''})=Rectangle $($barStrokeWidth/2), $((1-$flipY)*$barHeight), $barWidth, ($(-1+2*$flipY)*Clamp($barHeight*[Measure$(if ($flipX -eq 0){$i}else{$bands-$i+1})], $minimumHeight, $barHeight)), $cornerRadius | Fill Color [#Color1]
+Shape$(if ($i -ne 1){$i}else{''})=Rectangle $($gr1XOff+$barStrokeWidth/2+($i-1)*$a), $($gr1YOff+(1-$gr1flipY)*$barHeight), $barWidth, ($(-1+2*$flipY)*Clamp($barHeight*[Measure$(if ($gr1flipX -eq 0){$i}else{$bands-$i+1})], $minimumHeight, $barHeight)), $cornerRadius | Fill Color [#Color$(if ($gr1flipX -eq 0){$i}else{$bands-$i+1})]
 
-"@                   
+"@
                     }
+                    $b=$a*$bands
+                    for ($i=$bands+1; $i -lt 2*$bands+1; $i++) {
+                        $shapeContent+=@"
+
+Shape$i=Rectangle $($gr2XOff+$b+($i-1-$bands)*$a), $($gr2YOff+(1-$gr2flipY)*$barHeight), $barWidth, ($(-1+2*$gr2flipY)*Clamp($barHeight*($(if ($gr2Complement -eq 1){'1-'}else{''})[Measure$(if ($gr2flipX -eq 0){2*$bands+1 - $i}else{$i-$bands})]), $minimumHeight, $barHeight)), $cornerRadius | Fill Color [#Color$(if ($gr2flipX -eq 0){2*$bands+1 - $i}else{$i-$bands})]
+
+"@
+                    }
+                    break
                 }
 
 
                 'mirrorY' {
+                    $gr1XOff = $RmAPI.Variable("Group1XOffset")
+                    $gr1YOff = $RmAPI.Variable("Group1YOffset")
+                    $gr1flipX= $RmAPI.Variable("Group1XFlip")
+                    $gr1flipY= $RmAPI.Variable("Group1YFlip")
+                    $gr2XOff = $RmAPI.Variable("Group2XOffset")
+                    $gr2YOff = $RmAPI.Variable("Group2YOffset")
+                    $gr2flipX= $RmAPI.Variable("Group2XFlip")
+                    $gr2flipY= $RmAPI.Variable("Group2YFlip")
 
+                    $groupWidth = $(if ($gr1XOff -le $gr2XOff){($gr2XOff+($barWidth+$barGap)*$bands-$barGap)}else{($gr1XOff+($barWidth+$barGap)*$bands-$barGap)})
+                    $groupHeight = $gr1YOff+$gr2YOff
+
+                    $a = $barWidth + $barGap
+                    $width1 = $groupWidth+$barStrokeWidth
+                    $height1 = 2*($barHeight+$levitate+$barStrokeWidth)+$groupHeight
+
+                    $shapeContent+=@"
+
+[Shape]
+Meter=Shape
+DynamicVariables=1
+W=$($angleCos*$width1 + $angleSin*$height1)
+H=$($angleSin*$width1 + $angleCos*$height1)
+TransformationMatrix=$([math]::Cos(-$angle%360*([math]::PI/180)));$(-[math]::Sin(-$angle%360*([math]::PI/180)));$([math]::Sin(-$angle%360*([math]::PI/180)));$([math]::Cos(-$angle%360*([math]::PI/180)));$($(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$width1}else{0})+$(if ($angle%360 -gt 0 -and $angel%360 -lt 180){$angleSin*$height1}else{0}));$($(if ($angle%360 -gt 180 -and $angel%360 -lt 360){$angleSin*$width1}else{0})+$(if ($angle%360 -gt 90 -and $angel%360 -lt 270){$angleCos*$height1}else{0}))
+
+"@
+                    for ($i=1; $i -lt $bands+1; $i++) {                        
+                        $shapeContent+=@"
+
+Shape$(if ($i -ne 1){$i}else{''})=Rectangle $($gr1XOff+$barStrokeWidth/2+($i-1)*$a), $($gr1YOff+(1-$gr1flipY)*$barHeight), $barWidth, ($(-1+2*$gr1flipY)*Clamp($barHeight*[Measure$(if ($gr1flipX -eq 0){$i}else{$bands-$i+1})], $minimumHeight, $barHeight)), $cornerRadius | Fill Color [#Color$(if ($gr1flipX -eq 0){$i}else{$bands-$i+1})]
+
+"@
+                    }
+                    for ($i=$bands+1; $i -lt 2*$bands+1; $i++) {
+                        $shapeContent+=@"
+
+Shape$i=Rectangle $($gr2XOff+$barStrokeWidth/2+($i-1-$bands)*$a), $(($barHeight+$barStrokeWidth)+$gr2YOff+$gr2flipY*$barHeight), $barWidth, ($(1-2*$gr2flipY)*Clamp($barHeight*[Measure$(if ($gr2flipX -eq 0){$i-$bands}else{2*$bands+1-$i})], $minimumHeight, $barHeight)), $cornerRadius | Fill Color [#Color$(if ($gr1flipX -eq 0){$i}else{$bands-$i+1})]
+
+"@
+                    }
+                    break
                 }
 
 
@@ -173,6 +241,7 @@ Shape$(if ($i -ne 1){$i}else{''})=Rectangle $($barStrokeWidth/2), $((1-$flipY)*$
 
                 }
             }
+            $shapeContent | Out-File -FilePath $($resources + 'Visualizer\Bar.inc') -Encoding utf8
         }
 
 
@@ -218,7 +287,7 @@ Shape$(if ($i -ne 1){$i}else{''})=Rectangle $($barStrokeWidth/2), $((1-$flipY)*$
             }
             $RmAPI.Log($heightArray)
 
-            $maxHeight=($heightArray | measure -Maximum).Maximum
+            $maxHeight=($heightArray | Measure-Object -Maximum).Maximum
 
 #Creating required content
             for ($j=1; $j -lt $layerCount+1; $j++) {

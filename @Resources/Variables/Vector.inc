@@ -3,7 +3,7 @@
 ;@ | Name Vector
 
 ;?Integer | Name LayerCount
-LayerCount=3
+LayerCount=4
 
 ;?Integer | Name Points
 VectorBands=12
@@ -15,19 +15,21 @@ VectorHeight=150
 VectorWidth=#SCREENAREAWIDTH#
 
 ;Integer | Na
-Layer1Height=110
+Layer1Height=120
 
-Layer2Height=90
+Layer2Height=110
 
-Layer3Height=60
+Layer3Height=90
 
-Layer4Height=220
+Layer4Height=60
 
-Layer1Color=128,0,128, 90
+Layer1Color=0, 52, 88, 90
 
-Layer2Color=128,0,128, 130
+Layer2Color=0, 76, 127, 130
 
-Layer3Color=128,0,128, 250
+Layer3Color=0, 122, 204, 170
+
+Layer4Color=33, 33, 33, 255
 
 ;?Integer | Name Angle
 Angle=0
