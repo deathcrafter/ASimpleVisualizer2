@@ -2,7 +2,7 @@
 ;@Default | Name Visualizer Settings | Icon [\xF61F]
 
 ;?String | Name Bar Type
-BarType=mirrorY
+BarType=mirrorXY
 
 ;?Integer | Name BarCount | Description Number of Bars
 Bands=50
@@ -32,7 +32,7 @@ flipX=0
 flipY=0
 
 ;?Integer | Name Angle | Description Angle of visualizer
-Angle=30
+Angle=0
 
 ;?Integer | Name Minimum Height | Description Minimun height of Bars
 MinimumHeight=1
