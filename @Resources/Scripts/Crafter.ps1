@@ -4,7 +4,6 @@ function Update {
 function main {
 
 }
-
 function Vector {
     Craft -type vector
 }
@@ -17,7 +16,6 @@ function Bar {
 
     Craft -type bar -barType $barType
 }
-
 function Craft {
     param(
         [Parameter(Mandatory=$true)]
