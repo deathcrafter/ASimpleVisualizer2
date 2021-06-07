@@ -28,4 +28,5 @@ Handler-Layer4BCT=Type BandCascadeTransformer | MixFunction Average | MinWeight 
 Handler-Layer4Output=Type TimeResampler | Attack [#Attack] | Decay [#Decay] | Transform dB, Map(From -[#MaxSensitivity] : -[#MinSensitivity]), Clamp
 
 
+LogUnusedOptions=false
 
