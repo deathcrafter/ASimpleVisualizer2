@@ -28,7 +28,7 @@ Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable BarType "normal"][!WriteKeyValue Variables BarType "normal" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "normal"][!WriteKeyValue Variables BarType "normal" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
 [RadioString1Normal]
 Meter=String
 Text=Normal
@@ -37,7 +37,7 @@ Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!SetVariable BarType "normal"][!WriteKeyValue Variables BarType "normal" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "normal"][!WriteKeyValue Variables BarType "normal" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
  
 [MeasureRadio1MirrorX]
 Measure=String
@@ -52,7 +52,7 @@ Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable BarType "mirrorX"][!WriteKeyValue Variables BarType "mirrorX" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "mirrorX"][!WriteKeyValue Variables BarType "mirrorX" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
 [RadioString1MirrorX]
 Meter=String
 Text=MirrorX
@@ -61,7 +61,7 @@ Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!SetVariable BarType "mirrorX"][!WriteKeyValue Variables BarType "mirrorX" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "mirrorX"][!WriteKeyValue Variables BarType "mirrorX" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
  
 [MeasureRadio1MirrorY]
 Measure=String
@@ -76,7 +76,7 @@ Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable BarType "mirrorY"][!WriteKeyValue Variables BarType "mirrorY" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "mirrorY"][!WriteKeyValue Variables BarType "mirrorY" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
 [RadioString1MirrorY]
 Meter=String
 Text=MirrorY
@@ -85,7 +85,7 @@ Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!SetVariable BarType "mirrorY"][!WriteKeyValue Variables BarType "mirrorY" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "mirrorY"][!WriteKeyValue Variables BarType "mirrorY" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
  
 [MeasureRadio1MirrorXY]
 Measure=String
@@ -100,7 +100,7 @@ Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable BarType "mirrorXY"][!WriteKeyValue Variables BarType "mirrorXY" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "mirrorXY"][!WriteKeyValue Variables BarType "mirrorXY" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
 [RadioString1MirrorXY]
 Meter=String
 Text=MirrorXY
@@ -109,7 +109,7 @@ Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!SetVariable BarType "mirrorXY"][!WriteKeyValue Variables BarType "mirrorXY" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "mirrorXY"][!WriteKeyValue Variables BarType "mirrorXY" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
  
 [MeasureRadio1Reflection]
 Measure=String
@@ -124,7 +124,7 @@ Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable BarType "reflection"][!WriteKeyValue Variables BarType "reflection" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "reflection"][!WriteKeyValue Variables BarType "reflection" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
 [RadioString1Reflection]
 Meter=String
 Text=Reflection
@@ -133,7 +133,7 @@ Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!SetVariable BarType "reflection"][!WriteKeyValue Variables BarType "reflection" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!Refresh]
+LeftMouseUpAction=[!SetVariable BarType "reflection"][!WriteKeyValue Variables BarType "reflection" "#@#\Variables\[#Preset]\Bar.inc"][!Refresh]
  [VariableIcon2]
 Meter=String
 Text=
@@ -169,7 +169,7 @@ H=[VariableValue2:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Bands]
-Command1=[!SetVariable "Bands" "$UserInput$"][!WriteKeyValue "Variables" "Bands" "[#Bands]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue2][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Bands" "$UserInput$"][!WriteKeyValue "Variables" "Bands" "[#Bands]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue2][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue2 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue2][!Redraw]
 InputNumber=1
 
@@ -208,7 +208,7 @@ H=[VariableValue3:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Height]
-Command1=[!SetVariable "Height" "$UserInput$"][!WriteKeyValue "Variables" "Height" "[#Height]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue3][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Height" "$UserInput$"][!WriteKeyValue "Variables" "Height" "[#Height]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue3][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue3 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue3][!Redraw]
 InputNumber=1
 
@@ -247,7 +247,7 @@ H=[VariableValue4:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#BarWidth]
-Command1=[!SetVariable "BarWidth" "$UserInput$"][!WriteKeyValue "Variables" "BarWidth" "[#BarWidth]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue4][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "BarWidth" "$UserInput$"][!WriteKeyValue "Variables" "BarWidth" "[#BarWidth]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue4][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue4 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue4][!Redraw]
 InputNumber=1
 
@@ -286,7 +286,7 @@ H=[VariableValue5:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#BarGap]
-Command1=[!SetVariable "BarGap" "$UserInput$"][!WriteKeyValue "Variables" "BarGap" "[#BarGap]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue5][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "BarGap" "$UserInput$"][!WriteKeyValue "Variables" "BarGap" "[#BarGap]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue5][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue5 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue5][!Redraw]
 InputNumber=1
 
@@ -325,7 +325,7 @@ H=[VariableValue6:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#BarStrokeWidth]
-Command1=[!SetVariable "BarStrokeWidth" "$UserInput$"][!WriteKeyValue "Variables" "BarStrokeWidth" "[#BarStrokeWidth]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue6][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "BarStrokeWidth" "$UserInput$"][!WriteKeyValue "Variables" "BarStrokeWidth" "[#BarStrokeWidth]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue6][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue6 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue6][!Redraw]
 InputNumber=1
 
@@ -364,7 +364,7 @@ H=[VariableValue7:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#CornerRounding]
-Command1=[!SetVariable "CornerRounding" "$UserInput$"][!WriteKeyValue "Variables" "CornerRounding" "[#CornerRounding]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue7][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "CornerRounding" "$UserInput$"][!WriteKeyValue "Variables" "CornerRounding" "[#CornerRounding]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue7][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue7 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue7][!Redraw]
 InputNumber=1
 
@@ -403,7 +403,7 @@ H=[VariableValue8:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Levitate]
-Command1=[!SetVariable "Levitate" "$UserInput$"][!WriteKeyValue "Variables" "Levitate" "[#Levitate]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue8][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Levitate" "$UserInput$"][!WriteKeyValue "Variables" "Levitate" "[#Levitate]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue8][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue8 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue8][!Redraw]
 InputNumber=1
 
@@ -442,7 +442,7 @@ H=[VariableValue9:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Angle]
-Command1=[!SetVariable "Angle" "$UserInput$"][!WriteKeyValue "Variables" "Angle" "[#Angle]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue9][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Angle" "$UserInput$"][!WriteKeyValue "Variables" "Angle" "[#Angle]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue9][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue9 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue9][!Redraw]
 InputNumber=1
 
@@ -481,6 +481,6 @@ H=[VariableValue10:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#MinimumHeight]
-Command1=[!SetVariable "MinimumHeight" "$UserInput$"][!WriteKeyValue "Variables" "MinimumHeight" "[#MinimumHeight]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar.inc"][!UpdateMeter VariableValue10][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "MinimumHeight" "$UserInput$"][!WriteKeyValue "Variables" "MinimumHeight" "[#MinimumHeight]" "#@#\Variables\[#Preset]\Bar.inc"][!UpdateMeter VariableValue10][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue10 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue10][!Redraw]
 InputNumber=1

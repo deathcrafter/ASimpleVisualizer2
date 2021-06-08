@@ -19,10 +19,5 @@ BlurRadius=1
 ;?String | Name Channel | Description Auto::C::FL::FR::BL::BR::BC::SL::SR
 Channel=Auto
 
-;?RadioButton | Name Audio Source | Options Output,DefaultOutput; Input,DefaultInput; DeviceID,"ID: [#DeviceID]"
-AnalyzerPort=DefaultOutput
-
 ;?String | Name Window Function
 WindowFunction=Kaiser
-
-DeviceID=

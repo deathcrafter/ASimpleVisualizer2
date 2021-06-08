@@ -61,7 +61,7 @@ H=[VariableVariableValue1:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Layer1Gradient]
-Command1=[!SetVariable "Layer1Gradient" "$UserInput$"][!WriteKeyValue "Variables" "Layer1Gradient" "[#Layer1Gradient]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector\Gradient.inc"][!UpdateMeter VariableVariableValue1][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Layer1Gradient" "$UserInput$"][!WriteKeyValue "Variables" "Layer1Gradient" "[#Layer1Gradient]" "#@#\Variables\[#Preset]\Vector\Gradient.inc"][!UpdateMeter VariableVariableValue1][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableVariableValue1 FontColor "[#s_FontColor]"][!UpdateMeter VariableVariableValue1][!Redraw]
 
  [VariableIcon2]
@@ -99,7 +99,7 @@ H=[VariableVariableValue2:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Layer2Gradient]
-Command1=[!SetVariable "Layer2Gradient" "$UserInput$"][!WriteKeyValue "Variables" "Layer2Gradient" "[#Layer2Gradient]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector\Gradient.inc"][!UpdateMeter VariableVariableValue2][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Layer2Gradient" "$UserInput$"][!WriteKeyValue "Variables" "Layer2Gradient" "[#Layer2Gradient]" "#@#\Variables\[#Preset]\Vector\Gradient.inc"][!UpdateMeter VariableVariableValue2][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableVariableValue2 FontColor "[#s_FontColor]"][!UpdateMeter VariableVariableValue2][!Redraw]
 
  [VariableIcon3]
@@ -137,7 +137,7 @@ H=[VariableVariableValue3:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Layer3Gradient]
-Command1=[!SetVariable "Layer3Gradient" "$UserInput$"][!WriteKeyValue "Variables" "Layer3Gradient" "[#Layer3Gradient]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector\Gradient.inc"][!UpdateMeter VariableVariableValue3][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Layer3Gradient" "$UserInput$"][!WriteKeyValue "Variables" "Layer3Gradient" "[#Layer3Gradient]" "#@#\Variables\[#Preset]\Vector\Gradient.inc"][!UpdateMeter VariableVariableValue3][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableVariableValue3 FontColor "[#s_FontColor]"][!UpdateMeter VariableVariableValue3][!Redraw]
 
  [VariableIcon4]
@@ -175,5 +175,5 @@ H=[VariableVariableValue4:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Layer4Gradient]
-Command1=[!SetVariable "Layer4Gradient" "$UserInput$"][!WriteKeyValue "Variables" "Layer4Gradient" "[#Layer4Gradient]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector\Gradient.inc"][!UpdateMeter VariableVariableValue4][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Layer4Gradient" "$UserInput$"][!WriteKeyValue "Variables" "Layer4Gradient" "[#Layer4Gradient]" "#@#\Variables\[#Preset]\Vector\Gradient.inc"][!UpdateMeter VariableVariableValue4][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableVariableValue4 FontColor "[#s_FontColor]"][!UpdateMeter VariableVariableValue4][!Redraw]

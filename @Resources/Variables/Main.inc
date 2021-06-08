@@ -1,3 +1,14 @@
+;                                      __ __            
+;|\                /|        /\          |   |\        |
+;| \              / |       /  \         |   | \       |
+;|  \            /  |      /    \        |   |  \      |
+;|   \          /   |     /      \       |   |   \     |
+;|    \        /    |    /        \      |   |    \    |
+;|     \      /     |   /----------\     |   |     \   |
+;|      \    /      |  /            \    |   |      \  |
+;|       \  /       | /              \   |   |       \ |
+;|        \/        |/                \__|__ |        \|
+
 [Variables]
 ;@About | Name Settings | Description Control how your visualizer is rendered here. | Icon [\xE771]
 ;@Topic | Name Personalization | Icon [\xE771]
@@ -12,6 +23,17 @@ VisualizerType=Round
 ;@ | Name AudioAnalyzer | Icon [\xF0ED]
 
 Preset=Original
+
+ImageUnderlay=0
+ImageUnderlayName=wallhaven-g8ge83.jpg
+
+DeviceName=Speakers (High Definition Audio Device)
+DeviceID={0.0.0.00000000}.{14679fc7-41f6-4f57-996c-73f229e38ad6}
+
+;?RadioButton | Name Audio Source | Options Output,DefaultOutput; Input,DefaultInput; DeviceID,"ID: [#DeviceID]"
+AnalyzerPort=DefaultOutput
+
 @includeVariables=#@#Variables\[#Preset]\[#VisualizerType].inc
 @includeAnalyzer=#@#Variables\[#Preset]\AudioAnalyzerSettings.inc
 @includeColors=#@#Variables\[#Preset]\Colors.inc
+@IncludeImageUnderlay=#@#ImageUnderlay\ImageUnderlay[#ImageUnderlay].inc

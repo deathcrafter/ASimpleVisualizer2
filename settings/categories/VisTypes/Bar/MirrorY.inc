@@ -61,7 +61,7 @@ H=[VariableValue1:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Group1XOffset]
-Command1=[!SetVariable "Group1XOffset" "$UserInput$"][!WriteKeyValue "Variables" "Group1XOffset" "[#Group1XOffset]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeter VariableValue1][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Group1XOffset" "$UserInput$"][!WriteKeyValue "Variables" "Group1XOffset" "[#Group1XOffset]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeter VariableValue1][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue1 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue1][!Redraw]
 InputNumber=1
 
@@ -100,7 +100,7 @@ H=[VariableValue2:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Group2XOffset]
-Command1=[!SetVariable "Group2XOffset" "$UserInput$"][!WriteKeyValue "Variables" "Group2XOffset" "[#Group2XOffset]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeter VariableValue2][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Group2XOffset" "$UserInput$"][!WriteKeyValue "Variables" "Group2XOffset" "[#Group2XOffset]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeter VariableValue2][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue2 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue2][!Redraw]
 InputNumber=1
 
@@ -139,7 +139,7 @@ H=[VariableValue3:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Group1YOffset]
-Command1=[!SetVariable "Group1YOffset" "$UserInput$"][!WriteKeyValue "Variables" "Group1YOffset" "[#Group1YOffset]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeter VariableValue3][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Group1YOffset" "$UserInput$"][!WriteKeyValue "Variables" "Group1YOffset" "[#Group1YOffset]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeter VariableValue3][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue3 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue3][!Redraw]
 InputNumber=1
 
@@ -178,7 +178,7 @@ H=[VariableValue4:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Group2YOffset]
-Command1=[!SetVariable "Group2YOffset" "$UserInput$"][!WriteKeyValue "Variables" "Group2YOffset" "[#Group2YOffset]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeter VariableValue4][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Group2YOffset" "$UserInput$"][!WriteKeyValue "Variables" "Group2YOffset" "[#Group2YOffset]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeter VariableValue4][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue4 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue4][!Redraw]
 InputNumber=1
 
@@ -212,14 +212,14 @@ Text=[\xE739]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable Group1XFlip "(1-[#Group1XFlip])"][!WriteKeyValue Variables Group1XFlip "[#Group1XFlip]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList5Group1"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable Group1XFlip "(1-[#Group1XFlip])"][!WriteKeyValue Variables Group1XFlip "[#Group1XFlip]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList5Group1"][!Redraw][#s_OnChangeAction]
 [ListString5Group1]
 Meter=String
 Text=Group1
 Y=-1r
 Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!SetVariable Group1XFlip "(1-[#Group1XFlip])"][!WriteKeyValue Variables Group1XFlip "[#Group1XFlip]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList5Group1"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable Group1XFlip "(1-[#Group1XFlip])"][!WriteKeyValue Variables Group1XFlip "[#Group1XFlip]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList5Group1"][!Redraw][#s_OnChangeAction]
  
 [MeasureList5Group2]
 Measure=Calc
@@ -235,14 +235,14 @@ Text=[\xE739]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable Group2XFlip "(1-[#Group2XFlip])"][!WriteKeyValue Variables Group2XFlip "[#Group2XFlip]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList5Group2"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable Group2XFlip "(1-[#Group2XFlip])"][!WriteKeyValue Variables Group2XFlip "[#Group2XFlip]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList5Group2"][!Redraw][#s_OnChangeAction]
 [ListString5Group2]
 Meter=String
 Text=Group2
 Y=-1r
 Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!SetVariable Group2XFlip "(1-[#Group2XFlip])"][!WriteKeyValue Variables Group2XFlip "[#Group2XFlip]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList5Group2"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable Group2XFlip "(1-[#Group2XFlip])"][!WriteKeyValue Variables Group2XFlip "[#Group2XFlip]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList5Group2"][!Redraw][#s_OnChangeAction]
  
 [VariableIcon6]
 Meter=String
@@ -273,14 +273,14 @@ Text=[\xE739]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable Group1YFlip "(1-[#Group1YFlip])"][!WriteKeyValue Variables Group1YFlip "[#Group1YFlip]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList6Group1"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable Group1YFlip "(1-[#Group1YFlip])"][!WriteKeyValue Variables Group1YFlip "[#Group1YFlip]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList6Group1"][!Redraw][#s_OnChangeAction]
 [ListString6Group1]
 Meter=String
 Text=Group1
 Y=-1r
 Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!SetVariable Group1YFlip "(1-[#Group1YFlip])"][!WriteKeyValue Variables Group1YFlip "[#Group1YFlip]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList6Group1"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable Group1YFlip "(1-[#Group1YFlip])"][!WriteKeyValue Variables Group1YFlip "[#Group1YFlip]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList6Group1"][!Redraw][#s_OnChangeAction]
  
 [MeasureList6Group2]
 Measure=Calc
@@ -296,11 +296,11 @@ Text=[\xE739]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable Group2YFlip "(1-[#Group2YFlip])"][!WriteKeyValue Variables Group2YFlip "[#Group2YFlip]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList6Group2"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable Group2YFlip "(1-[#Group2YFlip])"][!WriteKeyValue Variables Group2YFlip "[#Group2YFlip]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList6Group2"][!Redraw][#s_OnChangeAction]
 [ListString6Group2]
 Meter=String
 Text=Group2
 Y=-1r
 Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!SetVariable Group2YFlip "(1-[#Group2YFlip])"][!WriteKeyValue Variables Group2YFlip "[#Group2YFlip]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList6Group2"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable Group2YFlip "(1-[#Group2YFlip])"][!WriteKeyValue Variables Group2YFlip "[#Group2YFlip]" "#@#\Variables\[#Preset]\Bar\MirrorY.inc"][!UpdateMeasure "MeasureList6Group2"][!Redraw][#s_OnChangeAction]

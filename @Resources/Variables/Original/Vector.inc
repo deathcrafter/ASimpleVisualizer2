@@ -9,19 +9,19 @@ LayerCount=4
 VectorBands=12
 
 ;?String | Name Width
-VectorWidth=#SCREENAREAWIDTH#
+VectorWidth=1366
 
 ;?Integer | Name Layer1 Height
-Layer1Height=120
+Layer1Height=700
 
 ;?Integer | Name Layer2 Height
-Layer2Height=110
+Layer2Height=700
 
 ;?Integer | Name Layer3 Height
-Layer3Height=90
+Layer3Height=650
 
 ;?Integer | Name Layer4 Height
-Layer4Height=60
+Layer4Height=600
 
 ;?RadioButton | Name Color Mode | Options Solid; Gradient
 BarType=Gradient

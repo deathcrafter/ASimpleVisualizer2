@@ -56,14 +56,14 @@ Text=[\xE739]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable flipX "(1-[#flipX])"][!WriteKeyValue Variables flipX "[#flipX]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\Normal.inc"][!UpdateMeasure "MeasureList1FlipX"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable flipX "(1-[#flipX])"][!WriteKeyValue Variables flipX "[#flipX]" "#@#\Variables\[#Preset]\Bar\Normal.inc"][!UpdateMeasure "MeasureList1FlipX"][!Redraw][#s_OnChangeAction]
 [ListString1FlipX]
 Meter=String
 Text=FlipX
 Y=-1r
 Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!SetVariable flipX "(1-[#flipX])"][!WriteKeyValue Variables flipX "[#flipX]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\Normal.inc"][!UpdateMeasure "MeasureList1FlipX"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable flipX "(1-[#flipX])"][!WriteKeyValue Variables flipX "[#flipX]" "#@#\Variables\[#Preset]\Bar\Normal.inc"][!UpdateMeasure "MeasureList1FlipX"][!Redraw][#s_OnChangeAction]
  
 [MeasureList1FlipY]
 Measure=Calc
@@ -79,11 +79,11 @@ Text=[\xE739]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable flipY "(1-[#flipY])"][!WriteKeyValue Variables flipY "[#flipY]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\Normal.inc"][!UpdateMeasure "MeasureList1FlipY"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable flipY "(1-[#flipY])"][!WriteKeyValue Variables flipY "[#flipY]" "#@#\Variables\[#Preset]\Bar\Normal.inc"][!UpdateMeasure "MeasureList1FlipY"][!Redraw][#s_OnChangeAction]
 [ListString1FlipY]
 Meter=String
 Text=FlipY
 Y=-1r
 Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!SetVariable flipY "(1-[#flipY])"][!WriteKeyValue Variables flipY "[#flipY]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Bar\Normal.inc"][!UpdateMeasure "MeasureList1FlipY"][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable flipY "(1-[#flipY])"][!WriteKeyValue Variables flipY "[#flipY]" "#@#\Variables\[#Preset]\Bar\Normal.inc"][!UpdateMeasure "MeasureList1FlipY"][!Redraw][#s_OnChangeAction]

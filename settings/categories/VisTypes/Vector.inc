@@ -33,7 +33,7 @@ H=[VariableValue1:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#LayerCount]
-Command1=[!SetVariable "LayerCount" "$UserInput$"][!WriteKeyValue "Variables" "LayerCount" "[#LayerCount]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!UpdateMeter VariableValue1][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "LayerCount" "$UserInput$"][!WriteKeyValue "Variables" "LayerCount" "[#LayerCount]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableValue1][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue1 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue1][!Redraw]
 InputNumber=1
 
@@ -72,7 +72,7 @@ H=[VariableValue2:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#VectorBands]
-Command1=[!SetVariable "VectorBands" "$UserInput$"][!WriteKeyValue "Variables" "VectorBands" "[#VectorBands]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!UpdateMeter VariableValue2][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "VectorBands" "$UserInput$"][!WriteKeyValue "Variables" "VectorBands" "[#VectorBands]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableValue2][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue2 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue2][!Redraw]
 InputNumber=1
 
@@ -111,7 +111,7 @@ H=[VariableVariableValue3:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#VectorWidth]
-Command1=[!SetVariable "VectorWidth" "$UserInput$"][!WriteKeyValue "Variables" "VectorWidth" "[#VectorWidth]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!UpdateMeter VariableVariableValue3][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "VectorWidth" "$UserInput$"][!WriteKeyValue "Variables" "VectorWidth" "[#VectorWidth]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableVariableValue3][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableVariableValue3 FontColor "[#s_FontColor]"][!UpdateMeter VariableVariableValue3][!Redraw]
 
  [VariableIcon4]
@@ -149,7 +149,7 @@ H=[VariableValue4:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Layer1Height]
-Command1=[!SetVariable "Layer1Height" "$UserInput$"][!WriteKeyValue "Variables" "Layer1Height" "[#Layer1Height]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!UpdateMeter VariableValue4][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Layer1Height" "$UserInput$"][!WriteKeyValue "Variables" "Layer1Height" "[#Layer1Height]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableValue4][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue4 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue4][!Redraw]
 InputNumber=1
 
@@ -188,7 +188,7 @@ H=[VariableValue5:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Layer2Height]
-Command1=[!SetVariable "Layer2Height" "$UserInput$"][!WriteKeyValue "Variables" "Layer2Height" "[#Layer2Height]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!UpdateMeter VariableValue5][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Layer2Height" "$UserInput$"][!WriteKeyValue "Variables" "Layer2Height" "[#Layer2Height]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableValue5][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue5 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue5][!Redraw]
 InputNumber=1
 
@@ -227,7 +227,7 @@ H=[VariableValue6:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Layer3Height]
-Command1=[!SetVariable "Layer3Height" "$UserInput$"][!WriteKeyValue "Variables" "Layer3Height" "[#Layer3Height]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!UpdateMeter VariableValue6][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Layer3Height" "$UserInput$"][!WriteKeyValue "Variables" "Layer3Height" "[#Layer3Height]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableValue6][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue6 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue6][!Redraw]
 InputNumber=1
 
@@ -266,7 +266,7 @@ H=[VariableValue7:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Layer4Height]
-Command1=[!SetVariable "Layer4Height" "$UserInput$"][!WriteKeyValue "Variables" "Layer4Height" "[#Layer4Height]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!UpdateMeter VariableValue7][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Layer4Height" "$UserInput$"][!WriteKeyValue "Variables" "Layer4Height" "[#Layer4Height]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableValue7][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue7 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue7][!Redraw]
 InputNumber=1
 
@@ -302,7 +302,7 @@ Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable BarType "Solid"][!WriteKeyValue Variables BarType "Solid" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!Update][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable BarType "Solid"][!WriteKeyValue Variables BarType "Solid" "#@#\Variables\[#Preset]\Vector.inc"][!Update][!Redraw][#s_OnChangeAction]
 [RadioString8Solid]
 Meter=String
 Text=Solid
@@ -311,7 +311,7 @@ Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!SetVariable BarType "Solid"][!WriteKeyValue Variables BarType "Solid" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!Update][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable BarType "Solid"][!WriteKeyValue Variables BarType "Solid" "#@#\Variables\[#Preset]\Vector.inc"][!Update][!Redraw][#s_OnChangeAction]
  
 [MeasureRadio8Gradient]
 Measure=String
@@ -326,7 +326,7 @@ Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
 DynamicVariables=1
-LeftMouseUpAction=[!SetVariable BarType "Gradient"][!WriteKeyValue Variables BarType "Gradient" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!Update][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable BarType "Gradient"][!WriteKeyValue Variables BarType "Gradient" "#@#\Variables\[#Preset]\Vector.inc"][!Update][!Redraw][#s_OnChangeAction]
 [RadioString8Gradient]
 Meter=String
 Text=Gradient
@@ -335,7 +335,7 @@ Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!SetVariable BarType "Gradient"][!WriteKeyValue Variables BarType "Gradient" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!Update][!Redraw][#s_OnChangeAction]
+LeftMouseUpAction=[!SetVariable BarType "Gradient"][!WriteKeyValue Variables BarType "Gradient" "#@#\Variables\[#Preset]\Vector.inc"][!Update][!Redraw][#s_OnChangeAction]
  [VariableIcon9]
 Meter=String
 Text=
@@ -371,6 +371,6 @@ H=[VariableValue9:H]
 W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
 DynamicVariables=1
 DefaultValue=[#Angle]
-Command1=[!SetVariable "Angle" "$UserInput$"][!WriteKeyValue "Variables" "Angle" "[#Angle]" "#SKINSPATH#ASimpleVisualizer2\@Resources\Variables\Original\Vector.inc"][!UpdateMeter VariableValue9][!Redraw][#s_OnChangeAction]
+Command1=[!SetVariable "Angle" "$UserInput$"][!WriteKeyValue "Variables" "Angle" "[#Angle]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableValue9][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableValue9 FontColor "[#s_FontColor]"][!UpdateMeter VariableValue9][!Redraw]
 InputNumber=1
