@@ -12,22 +12,22 @@ VectorBands=12
 VectorWidth=1366
 
 ;?String | Name Width
-MinimumHeight=30
+MinimumHeight=20
 
 ;?Integer | Name Layer1 Height
-Layer1Height=160
+Layer1Height=150
 
 ;?Integer | Name Layer2 Height
-Layer2Height=140
+Layer2Height=130
 
 ;?Integer | Name Layer3 Height
-Layer3Height=110
+Layer3Height=100
 
 ;?Integer | Name Layer4 Height
-Layer4Height=90
+Layer4Height=80
 
 ;?RadioButton | Name Color Mode | Options Solid; Gradient
-BarType=Solid
+BarType=Gradient
 
 ;?Integer | Name Angle
 Angle=0

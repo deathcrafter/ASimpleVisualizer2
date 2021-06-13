@@ -1,4 +1,4 @@
- [VariableIcon0]
+[VariableIcon0]
 Meter=String
 Text=
 MeterStyle=VariableIcon | RightPanel
@@ -46,13 +46,13 @@ Meter=Shape
 Shape=Ellipse [#s_ColorSize],[#s_ColorSize],[#s_ColorSize],[#s_ColorSize] | Fill Color [#Layer1Color] | StrokeWidth [#s_ColorStrokeWidth] | Extend Outline
 Outline=Stroke Color [#s_ColorStrokeColor]
 MeterStyle=VarColorValue | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer1Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer1Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
 [StringVariableValue1]
 Meter=String
 Text=[#Layer1Color]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer1Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer1Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
  [VariableIcon2]
 Meter=String
@@ -74,13 +74,13 @@ Meter=Shape
 Shape=Ellipse [#s_ColorSize],[#s_ColorSize],[#s_ColorSize],[#s_ColorSize] | Fill Color [#Layer2Color] | StrokeWidth [#s_ColorStrokeWidth] | Extend Outline
 Outline=Stroke Color [#s_ColorStrokeColor]
 MeterStyle=VarColorValue | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer2Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer2Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
 [StringVariableValue2]
 Meter=String
 Text=[#Layer2Color]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer2Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer2Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
  [VariableIcon3]
 Meter=String
@@ -102,13 +102,13 @@ Meter=Shape
 Shape=Ellipse [#s_ColorSize],[#s_ColorSize],[#s_ColorSize],[#s_ColorSize] | Fill Color [#Layer3Color] | StrokeWidth [#s_ColorStrokeWidth] | Extend Outline
 Outline=Stroke Color [#s_ColorStrokeColor]
 MeterStyle=VarColorValue | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer3Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer3Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
 [StringVariableValue3]
 Meter=String
 Text=[#Layer3Color]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer3Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer3Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
  [VariableIcon4]
 Meter=String
@@ -130,11 +130,11 @@ Meter=Shape
 Shape=Ellipse [#s_ColorSize],[#s_ColorSize],[#s_ColorSize],[#s_ColorSize] | Fill Color [#Layer4Color] | StrokeWidth [#s_ColorStrokeWidth] | Extend Outline
 Outline=Stroke Color [#s_ColorStrokeColor]
 MeterStyle=VarColorValue | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer4Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer4Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
 [StringVariableValue4]
 Meter=String
 Text=[#Layer4Color]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer4Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer4Color', '[&ColorPickerUI:sub('#@#Variables\Original\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=

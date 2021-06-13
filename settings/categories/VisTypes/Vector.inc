@@ -114,6 +114,44 @@ DefaultValue=[#VectorWidth]
 Command1=[!SetVariable "VectorWidth" "$UserInput$"][!WriteKeyValue "Variables" "VectorWidth" "[#VectorWidth]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableVariableValue3][!Redraw][#s_OnChangeAction]
 OnDismissAction=[!SetOption VariableVariableValue3 FontColor "[#s_FontColor]"][!UpdateMeter VariableVariableValue3][!Redraw]
 
+ [VariableIcon10]
+Meter=String
+Text=
+MeterStyle=VariableIcon | RightPanel
+Hidden=
+[VariableTitle10]
+Meter=String
+Text=Minimum Height
+MeterStyle=VarTitle | RightPanel
+Hidden=
+[VariableDescription10]
+Meter=String
+Text=
+MeterStyle=VarDescription | RightPanel
+Hidden=
+[VariableVariableValue10]
+Meter=String
+Text=[#MinimumHeight]
+MeterStyle=VarStringValue | RightPanel
+LeftMouseUpAction=[!CommandMeasure "InputText10" "ExecuteBatch All"][!SetOption #CURRENTSECTION# FontColor "0,0,0,0"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+Hidden=
+[InputText10]
+Measure=Plugin
+Plugin=InputText
+SolidColor=[#s_RightPanelBackgroundColor]
+FontColor=#s_FontColor#
+FontFace=#s_FontFace#
+FontSize=#s_InputTextFontSize#
+Disabled=
+X=([VariableVariableValue10:X])
+Y=([VariableVariableValue10:Y] + [#s_ValueYPadding])
+H=[VariableVariableValue10:H]
+W=([#s_RightPanelW] - ([#s_VariableXPadding] * 2))
+DynamicVariables=1
+DefaultValue=[#MinimumHeight]
+Command1=[!SetVariable "MinimumHeight" "$UserInput$"][!WriteKeyValue "Variables" "MinimumHeight" "[#MinimumHeight]" "#@#\Variables\[#Preset]\Vector.inc"][!UpdateMeter VariableVariableValue10][!Redraw][#s_OnChangeAction]
+OnDismissAction=[!SetOption VariableVariableValue10 FontColor "[#s_FontColor]"][!UpdateMeter VariableVariableValue10][!Redraw]
+
  [VariableIcon4]
 Meter=String
 Text=
