@@ -5,10 +5,10 @@
  = 
 
 ;?Color | Name Layer 1
-Layer1Color=108,79,99,166
+Layer1Color=255,255,255,30
 ;?Color | Name Layer 2
-Layer2Color=58,30,68,169
+Layer2Color=255,255,255,71
 ;?Color | Name Layer 3
-Layer3Color=173,143,135,118
+Layer3Color=255,255,255,130
 ;?Color | Name Layer 4
 Layer4Color=253,229,195

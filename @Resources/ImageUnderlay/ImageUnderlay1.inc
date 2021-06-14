@@ -6,4 +6,5 @@ H=[Shape:H]
 W=[Shape:W]
 DynamicVariables=1
 PreserveAspectRatio=2
+UpdateDivider=-1
 TransformationMatrix=1;0;0;1;0;0

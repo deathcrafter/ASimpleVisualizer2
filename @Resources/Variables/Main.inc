@@ -25,7 +25,7 @@ VisualizerType=Vector
 Preset=Original
 
 ImageUnderlay=1
-ImageUnderlayName=moon-stargazing-night-clouds-digital-art-uhdpaper.com-4K-87.jpg
+ImageUnderlayName=1152634.png
 
 DeviceName=Speakers (High Definition Audio Device)
 DeviceID={0.0.0.00000000}.{14679fc7-41f6-4f57-996c-73f229e38ad6}
