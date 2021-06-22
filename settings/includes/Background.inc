@@ -93,3 +93,22 @@ Y=0R
 X=0
 SolidColor=0,0,0,0
 
+[CloseShape]
+Meter=Shape
+X=405
+Y=5
+Shape=Rectangle 0,0,30,30,5 | Fill Color [#CloseColor] | StrokeWidth 0
+DynamicVariables=1
+MouseOverAction=[!SetVariable CloseColor "FF0000"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+MouseLeaveAction=[!SetVariable CloseColor "FFFFFF"][!UpdateMeter #CURRENTSECTION#][!Redraw]
+LeftMouseUpAction=[!WriteKeyValue Variables s_CurrentCategory "0" "#ROOTCONFIGPATH#settings\includes\Variables.inc"][!DeactivateConfig]
+[Close]
+Meter=String
+Text=[\xE711]
+X=420
+Y=22
+FontFace=Segoe MDL2 Assets
+FontColor=000000
+FontSize=20
+StringAlign=CenterCenter
+AntiAlias=1

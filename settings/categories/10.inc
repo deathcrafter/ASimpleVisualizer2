@@ -1,6 +1,3 @@
-[Rainmeter]
-OnRefreshAction=[!CommandMeasure Crafter [#VisualizerType]]
-
 [FirstRightPanel]
 Meter=String
 Text=First
@@ -56,7 +53,7 @@ Meter=String
 Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
-LeftMouseUpAction=[!WriteKeyValue Variables Preset "Original" "#@#\Variables\Main.inc"][!Refresh]
+LeftMouseUpAction=[!WriteKeyValue Variables Preset "Original" "#@#\Variables\Main.inc"][#ConstChangeAction][!Refresh]
 [RadioString0Original]
 Meter=String
 Text=Original
@@ -65,44 +62,44 @@ Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!WriteKeyValue Variables Preset "Original" "#@#\Variables\Main.inc"][!Refresh]
+LeftMouseUpAction=[!WriteKeyValue Variables Preset "Original" "#@#\Variables\Main.inc"][#ConstChangeAction][!Refresh]
  
-[MeasureRadio0Geass]
+[MeasureRadio0Boxes]
 Measure=String
 String=[#Preset]
-IfMatch=^Geass$
-IfMatchAction=[!SetOption RadioString0Geass InlinePattern ".*"][!SetOption RadioButton0Geass Text "[\xECCB]"][!Update][!Redraw]
-[RadioButton0Geass]
+IfMatch=^Boxes$
+IfMatchAction=[!SetOption RadioString0Boxes InlinePattern ".*"][!SetOption RadioButton0Boxes Text "[\xECCB]"][!Update][!Redraw]
+[RadioButton0Boxes]
 Meter=String
 Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
-LeftMouseUpAction=[!WriteKeyValue Variables Preset "Geass" "#@#\Variables\Main.inc"][!WriteKeyValue Variables VisualizerType "Round" "#@#\Variables\Main.inc"][!Refresh]
-[RadioString0Geass]
+LeftMouseUpAction=[!WriteKeyValue Variables Preset "Boxes" "#@#\Variables\Main.inc"][!WriteKeyValue Variables VisualizerType "Bar" "#@#\Variables\Main.inc"][#ConstChangeAction][!Refresh]
+[RadioString0Boxes]
 Meter=String
-Text=Geass
+Text=Boxes
 Y=-1r
 Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
 MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
-LeftMouseUpAction=[!WriteKeyValue Variables Preset "Geass" "#@#\Variables\Main.inc"][!Refresh]
+LeftMouseUpAction=[!WriteKeyValue Variables Preset "Boxes" "#@#\Variables\Main.inc"][!WriteKeyValue Variables VisualizerType "Bar" "#@#\Variables\Main.inc"][#ConstChangeAction][!Refresh]
  
-[MeasureRadio0Coming soon]
+[MeasureRadio0VectorBar]
 Measure=String
 String=[#Preset]
-IfMatch=^Coming soon$
-IfMatchAction=[!SetOption RadioString0Coming soon InlinePattern ".*"][!SetOption RadioButton0Coming soon Text "[\xECCB]"][!Update][!Redraw]
-[RadioButton0Coming soon]
+IfMatch=^VectorBar$
+IfMatchAction=[!SetOption RadioString0VectorBar InlinePattern ".*"][!SetOption RadioButton0VectorBar Text "[\xECCB]"][!Update][!Redraw]
+[RadioButton0VectorBar]
 Meter=String
 FontColor=303030
 Text=[\xECCA]
 FontSize=15
 MeterStyle=VariableIcon | RightPanel
-;LeftMouseUpAction=[!WriteKeyValue Variables Preset "Coming soon" "#@#\Variables\Main.inc"][!Refresh]
-[RadioString0Coming soon]
+LeftMouseUpAction=[!WriteKeyValue Variables Preset "VectorBar" "#@#\Variables\Main.inc"][!WriteKeyValue Variables VisualizerType "Vector" "#@#\Variables\Main.inc"][#ConstChangeAction][!Refresh]
+[RadioString0VectorBar]
 Meter=String
-Text=Coming soon
+Text=VectorBar
 FontColor=303030
 Y=-1r
 Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
@@ -112,7 +109,7 @@ MeterStyle=VarStringValue | VarColorString | RightPanel
 InlinePattern=^$
 InlineSetting=Weight | 600
 DynamicVariables=1
-;LeftMouseUpAction=[!WriteKeyValue Variables Preset "Coming soon" "#@#\Variables\Main.inc"][!Refresh]
+LeftMouseUpAction=[!WriteKeyValue Variables Preset "VectorBar" "#@#\Variables\Main.inc"][!WriteKeyValue Variables VisualizerType "Vector" "#@#\Variables\Main.inc"][#ConstChangeAction][!Refresh]
 
 [PreviewImage]
 Meter=Image
@@ -121,7 +118,7 @@ Y=10R
 H=198
 W=352
 ImageName=#@#Images\[#Preset]
-PreserveAspectRatio=2
-SolidColor=000000
+PreserveAspectRatio=1
+SolidColor=00000030
 DynamicVariables=1
 MeterStyle=RightPanel

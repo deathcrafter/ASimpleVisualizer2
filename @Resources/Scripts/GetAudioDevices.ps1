@@ -1,30 +1,5 @@
-function Update {
-    if($(try {if(Get-AudioDevice -List){1}} catch {0}) -eq 1){return 1}else{return 0}
-}
-function GetAudioDevices {
-    switch($(if($(try {if(Get-AudioDevice -List){1}} catch {0}) -eq 1){1}else{0})) {
-        '0' {
-            $RmAPI.Log($profile)
-            $RmAPI.Log('Building module directory')
-            $moduleDirectory=$(if($("$env:OneDrive\Documents" | Get-ChildItem -Name) -contains "WindowsPowerShell"){"$env:OneDrive\Documents\WindowsPowershell\Modules"}else{"$($Home)\Documents\WindowsPowerShell\Modules"})
-            $RmAPI.Log($moduleDirectory)
-            New-Item -Path $moduleDirectory -Name "AudioDeviceCmdlets" -ItemType "directory" -Force
-            $RmAPI.Log('Copying required files')
-            Copy-Item "$($RmAPI.VariableStr('@'))Addons\AudioDeviceCmdlets.dll" "$moduleDirectory\AudioDeviceCmdlets\AudioDeviceCmdlets.dll"
-            $RmAPI.Log('Installing module')
-            Set-Location "$modulePath\AudioDeviceCmdlets"
-            Get-ChildItem | Unblock-File
-            $RmAPI.Log('Importing module')
-            Import-Module .\AudioDeviceCmdlets.dll
-            $RmAPI.Bang("[!WriteKeyValue Variables InstalledState Installed `"$($RmAPI.VariableStr('ROOTCONFIGPATH'))settings\categories\7.inc`"]")
-            ListAudioDevices
-            }
-        '1' {
-            $RmAPI.Bang("[!WriteKeyValue Variables InstalledState Installed `"$($RmAPI.VariableStr('ROOTCONFIGPATH'))settings\categories\7.inc`"]")
-            ListAudioDevices
-        }
-    }
-}
+$env:PSModulePath+="$([System.IO.Path]::PathSeparator)$($RmAPI.VariableStr('@'))Addons"
+
 function ListAudioDevices {
     $a=Get-AudioDevice -List
     $device=@"
@@ -36,8 +11,8 @@ Meter=Shape
 X=55
 Y=295
 Shape=Rectangle 0,0,370,190,7 | Fill Color 0090F0 | StrokeWidth 0
-MouseScrollDownAction=[!SetVariable DevScroll "(Clamp([#DevScroll]+15, 0, (Max([Scroller]-172,0))))"][!Log Down][!Update][!Redraw]
-MouseScrollUpAction=[!SetVariable DevScroll "(Clamp([#DevScroll]-15, 0, (Max([Scroller]-172,0))))"][!Log Up][!Update][!Redraw]
+MouseScrollDownAction=[!SetVariable DevScroll "(Clamp([#DevScroll]+15, 0, (Max([Scroller]-172,0))))"][!Log Down][!UpdateMeterGroup DeviceList][!Redraw]
+MouseScrollUpAction=[!SetVariable DevScroll "(Clamp([#DevScroll]-15, 0, (Max([Scroller]-172,0))))"][!Log Up][!UpdateMeterGroup DeviceList][!Redraw]
 Group=DeviceList
 Hidden=1
 [DevicesBackground]
@@ -82,7 +57,7 @@ Hidden=1
 Meter=String
 Text=$($_.Name)
 MeterStyle=DeviceStringStyle
-LeftMouseUpAction=[!WriteKeyValue Variables DeviceName `"$($_.Name)`" `"#@#Variables\Main.inc`"][!WriteKeyValue Variables DeviceID `"$($_.ID)`" `"#@#Variables\Main.inc`"][!Refresh]
+LeftMouseUpAction=[!WriteKeyValue Variables DeviceName `"$($_.Name)`" `"#@#Variables\Main.inc`"][!WriteKeyValue Variables DeviceID `"$($_.ID)`" `"#@#Variables\Main.inc`"][!Refresh "#ROOTCONFIG#"][!Refresh]
 "@
         }
     $index++
@@ -122,7 +97,7 @@ Hidden=1
 Meter=String
 Text=$($_.Name)
 MeterStyle=DeviceStringStyle
-LeftMouseUpAction=[!WriteKeyValue Variables DeviceName `"$($_.Name)`" `"#@#Variables\Main.inc`"][!WriteKeyValue Variables DeviceID `"$($_.ID)`" `"#@#Variables\Main.inc`"][!Refresh]
+LeftMouseUpAction=[!WriteKeyValue Variables DeviceName `"$($_.Name)`" `"#@#Variables\Main.inc`"][!WriteKeyValue Variables DeviceID `"$($_.ID)`" `"#@#Variables\Main.inc`"][!Refresh "#ROOTCONFIG#"][!Refresh]
 "@
         }
     $index++
@@ -140,8 +115,6 @@ Hidden=1
 Measure=Calc
 DynamicVariables=1
 Formula=([DevLastItem:Y]-[DevicesContainer:Y])
-IfBelowValue=172
-IfBelowAction=[!DisableMouseAction DevicesContainer "MouseScrollDownAction|MouseScrollUpAction"]
 
 "@
     $device | Out-File -FilePath $($RmAPI.VariableStr('ROOTCONFIGPATH') + 'settings\categories\DeviceID\DeviceList.inc')

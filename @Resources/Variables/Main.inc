@@ -22,13 +22,13 @@ VisualizerType=Vector
 ;@ | Name Device | Description Select a specific device(for advanced users) | Icon [\xE95B]
 ;@ | Name AudioAnalyzer | Icon [\xF0ED]
 
-Preset=Original
+Preset=VectorBar
 
 ImageUnderlay=1
-ImageUnderlayName=1152634.png
+ImageUnderlayName=#@#UserImages\vectorbar.jpg
 
-DeviceName=Speakers (High Definition Audio Device)
-DeviceID={0.0.0.00000000}.{14679fc7-41f6-4f57-996c-73f229e38ad6}
+DeviceName=
+DeviceID=
 
 ;?RadioButton | Name Audio Source | Options Output,DefaultOutput; Input,DefaultInput; DeviceID,"ID: [#DeviceID]"
 AnalyzerPort=DefaultOutput

@@ -9,7 +9,7 @@ LayerCount=4
 VectorBands=12
 
 ;?String | Name Width
-VectorWidth=600
+VectorWidth=1366
 
 ;?String | Name Width
 MinimumHeight=30
@@ -30,7 +30,7 @@ Layer4Height=90
 BarType=Solid
 
 ;?Integer | Name Angle
-Angle=90
+Angle=0
 
 ;?String | Layer1
 Layer1Gradient=180 | 112, 34, 231, 90;0.0 | 255, 46, 37, 90;1.0

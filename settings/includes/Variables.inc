@@ -2,7 +2,7 @@
 
 ;@About | Name Internal settings | Description Changing internal variables requires generating to apply changes. | Icon [\xF259]
 ;?Integer | Name Scroll speed | Description 
-s_ScrollSpeed=30
+s_ScrollSpeed=50
 ;? | Name Theme 1 name
 s_Theme0Name=Light
 ;? | Name Theme 2 name
@@ -15,7 +15,7 @@ s_Theme2Name=Slim
 s_ScrollTreshold=[#s_PanelH]
 s_ScrollRightPanel=0
 s_ScrollLeftPanel=0
-s_CurrentCategory=4
+s_CurrentCategory=0
 s_SettingsTheme=2
 
 ;@ | Name Generator | Icon [\xE9F5]

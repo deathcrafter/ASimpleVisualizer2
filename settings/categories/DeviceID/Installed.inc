@@ -39,7 +39,7 @@ FontSize=12
 Text=[\xE72C]
 MeterStyle=VariableIcon | RightPanel
 Hidden=
-LeftMouseUpAction=[!CommandMeasure PRM GetAudioDevices]
+LeftMouseUpAction=[!CommandMeasure PRM ListAudioDevices]
 [VariableDescription0]
 Meter=String
 Text=
