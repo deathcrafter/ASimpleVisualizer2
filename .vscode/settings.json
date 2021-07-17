@@ -1,8 +1,0 @@
-{
-    "Lua.diagnostics.globals": [
-        "getShade",
-        "hsvToRgb",
-        "SKIN",
-        "Math"
-    ]
-}

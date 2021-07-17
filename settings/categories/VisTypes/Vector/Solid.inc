@@ -1,33 +1,70 @@
-;[Rainmeter]
-;OnRefreshAction=[!CommandMeasure Crafter "[#VisualizerType]"]
-
-[VariableIcon0]
+[VariableIcon8]
 Meter=String
 Text=
 MeterStyle=VariableIcon | RightPanel
 Hidden=
-[VariableTitle0]
+[VariableTitle8]
 Meter=String
-Text=Solid 
+Text=Color Mode 
 MeterStyle=VarTitle | RightPanel
 Hidden=
-[VariableDescription0]
+[VariableDescription8]
 Meter=String
-Text=Solid colors for vector layers 
+Text=
 MeterStyle=VarDescription | RightPanel
 Hidden=
-[VariableValue0]
+[MeasureRadio8Solid]
+Measure=String
+String=[#BarType]
+DynamicVariables=1
+IfMatch=^Solid$
+IfMatchAction=[!SetOption RadioString8Solid InlinePattern ".*"][!SetOption RadioButton8Solid Text "[\xECCB]"][!Update][!Redraw]
+IfNotMatchAction=[!SetOption RadioString8Solid InlinePattern "^$"][!SetOption RadioButton8Solid Text "[\xECCA]"][!Update][!Redraw]
+[RadioButton8Solid]
 Meter=String
-Text= 
-MeterStyle=VarStringValue | Link0 | RightPanel
+Text=[\xECCA]
+FontSize=15
+MeterStyle=VariableIcon | RightPanel
+DynamicVariables=1
+LeftMouseUpAction=[!WriteKeyValue Variables BarType "Solid" "#@#\Variables\[#Preset]\Vector.inc"][#ConstChangeAction][!Refresh]
+[RadioString8Solid]
+Meter=String
+Text=Solid
+Y=-1r
+Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
+MeterStyle=VarStringValue | VarColorString | RightPanel
+InlinePattern=^$
+InlineSetting=Weight | 600
+LeftMouseUpAction=[!WriteKeyValue Variables BarType "Solid" "#@#\Variables\[#Preset]\Vector.inc"][#ConstChangeAction][!Refresh]
+
+[MeasureRadio8Gradient]
+Measure=String
+String=[#BarType]
+DynamicVariables=1
+IfMatch=^Gradient$
+IfMatchAction=[!SetOption RadioString8Gradient InlinePattern ".*"][!SetOption RadioButton8Gradient Text "[\xECCB]"][!Update][!Redraw]
+IfNotMatchAction=[!SetOption RadioString8Gradient InlinePattern "^$"][!SetOption RadioButton8Gradient Text "[\xECCA]"][!Update][!Redraw]
+[RadioButton8Gradient]
+Meter=String
+Text=[\xECCA]
+FontSize=15
+MeterStyle=VariableIcon | RightPanel
+DynamicVariables=1
+LeftMouseUpAction=[!WriteKeyValue Variables BarType "Gradient" "#@#\Variables\[#Preset]\Vector.inc"][#ConstChangeAction][!Refresh]
+[RadioString8Gradient]
+Meter=String
+Text=Gradient
+Y=-1r
+Padding=0,0,[#s_VariableXPadding],[#s_ValueYPadding]
+MeterStyle=VarStringValue | VarColorString | RightPanel
+InlinePattern=^$
+InlineSetting=Weight | 600
+LeftMouseUpAction=[!WriteKeyValue Variables BarType "Gradient" "#@#\Variables\[#Preset]\Vector.inc"][#ConstChangeAction][!Refresh]
+ [VariableIcon9]
+Meter=String
+Text=
+MeterStyle=VariableIcon | RightPanel
 Hidden=
-LeftMouseUpAction=[" "]
-[MeasureLinkStatus0]
-Measure=Calc
-Formula=0
-IfCondition=(0 = #CURRENTSECTION#)
-IfTrueAction=[!DisableMouseAction VariableValue0 LeftMouseUpAction]
-Disabled=
 
  [VariableIcon1]
 Meter=String
@@ -77,13 +114,13 @@ Meter=Shape
 Shape=Ellipse [#s_ColorSize],[#s_ColorSize],[#s_ColorSize],[#s_ColorSize] | Fill Color [#Layer2Color] | StrokeWidth [#s_ColorStrokeWidth] | Extend Outline
 Outline=Stroke Color [#s_ColorStrokeColor]
 MeterStyle=VarColorValue | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer2Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction][#ConstChangeAction]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer2Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
 [StringVariableValue2]
 Meter=String
 Text=[#Layer2Color]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer2Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction][#ConstChangeAction]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer2Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
  [VariableIcon3]
 Meter=String
@@ -105,13 +142,13 @@ Meter=Shape
 Shape=Ellipse [#s_ColorSize],[#s_ColorSize],[#s_ColorSize],[#s_ColorSize] | Fill Color [#Layer3Color] | StrokeWidth [#s_ColorStrokeWidth] | Extend Outline
 Outline=Stroke Color [#s_ColorStrokeColor]
 MeterStyle=VarColorValue | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer3Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction][#ConstChangeAction]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer3Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
 [StringVariableValue3]
 Meter=String
 Text=[#Layer3Color]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer3Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction][#ConstChangeAction]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer3Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
  [VariableIcon4]
 Meter=String
@@ -133,11 +170,11 @@ Meter=Shape
 Shape=Ellipse [#s_ColorSize],[#s_ColorSize],[#s_ColorSize],[#s_ColorSize] | Fill Color [#Layer4Color] | StrokeWidth [#s_ColorStrokeWidth] | Extend Outline
 Outline=Stroke Color [#s_ColorStrokeColor]
 MeterStyle=VarColorValue | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer4Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction][#ConstChangeAction]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer4Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=
 [StringVariableValue4]
 Meter=String
 Text=[#Layer4Color]
 MeterStyle=VarStringValue | VarColorString | RightPanel
-LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer4Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction][#ConstChangeAction]
+LeftMouseUpAction=[!CommandMeasure ColorPickerUI "Change('Layer4Color', '[&ColorPickerUI:sub('#@#Variables\[#Preset]\Vector\Solid.inc')]', '[&ColorPickerUI:sub('[#CURRENTCONFIG]')]')"][#ConstChangeAction]
 Hidden=

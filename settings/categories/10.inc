@@ -122,3 +122,29 @@ PreserveAspectRatio=1
 SolidColor=00000030
 DynamicVariables=1
 MeterStyle=RightPanel
+
+[LastRightPanel]
+Meter=String
+Text=Last
+FontColor=255,0,0,0
+MeterStyle=LastItem | RightPanel
+
+[ScrollDownRightPanel]
+Measure=Calc
+Formula=[#s_ScrollRightPanel] - [#s_ScrollSpeed]
+IfCondition=([LastRightPanel:Y] > [#s_ScrollTreshold])
+IfTrueAction=[!SetVariable "s_ScrollRightPanel" "[&ScrollDownRightPanel]"][!DisableMeasure "ScrollDownRightPanel"][!Update][!Redraw]
+IfFalseAction=[!DisableMeasure "ScrollDownRightPanel"]
+IfConditionMode=1
+Disabled=1
+DynamicVariables=1
+
+[ScrollUpRightPanel]
+Measure=Calc
+Formula=[#s_ScrollRightPanel] + [#s_ScrollSpeed]
+IfCondition=([FirstRightPanel:Y] < 0)
+IfTrueAction=[!SetVariable "s_ScrollRightPanel" "[&ScrollUpRightPanel]"][!DisableMeasure "ScrollUpRightPanel"][!Update][!Redraw]
+IfFalseAction=[!DisableMeasure "ScrollUpRightPanel"]
+IfConditionMode=1
+Disabled=1
+DynamicVariables=1

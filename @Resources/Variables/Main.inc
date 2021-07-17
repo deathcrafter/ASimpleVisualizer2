@@ -25,7 +25,7 @@ VisualizerType=Vector
 Preset=VectorBar
 
 ImageUnderlay=1
-ImageUnderlayName=#@#UserImages\vectorbar.jpg
+ImageUnderlayName=C:\Users\sahoo\OneDrive\Documents\Rainmeter\Skins\ASimpleVisualizer2\@Resources\UserImages\vectorbar.jpg
 
 DeviceName=
 DeviceID=
